@@ -5,7 +5,9 @@ export default {
   files: '**/*.mdx',
   ignore: ['./*.md'],
   title: pkgName,
+  base: '/Vocode-Wiki',
   description: ``,
+  dest: '/docs',
   menu: [
     'Introduction',
     { name: 'Transcribers', menu: ["Whisper (recommended)", "Vosk", "Faster Whisper"] },
