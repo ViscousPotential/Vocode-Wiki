@@ -10,6 +10,8 @@ export default {
   dest: '/docs',
   menu: [
     'Introduction',
+    'Get Started',
+    { name: 'Release Notes', menu: [] },
     { name: 'Transcribers', menu: ["Whisper (recommended)", "Vosk", "Faster Whisper"] },
     { name: 'Transformers', menu: [] },
     { name: 'Exporters', menu: [] },
