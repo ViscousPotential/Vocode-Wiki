@@ -46,8 +46,7 @@ export default {
     menu: {
       search: true,
       headings: {
-        rightSide: true,
-        depth: 3,
+        rightSide: false,
       },
     },
   },
