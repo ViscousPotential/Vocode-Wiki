@@ -1,0 +1,24 @@
+---
+name: Get Started
+route: /
+---
+
+# Get Started
+
+## Transcribers
+
+[Whisper](transcribers#whisper-recommended) is the default transcriber and is used to convert recorded speech to text. All transcribers are 100% offline and on-device.
+
+## Transformers
+
+Transformers are used to modify text produced by transcribers before they are saved or exported. By default, [to-lowercase](/transformers/to-lowercase) and [remove-punctuation](/transformers/remove-punctuation) are in use.
+
+## Exporters
+
+Exporters are used to submit, edit and delete text in files, notes applications etc. There are no exporters in use by default, which allows you to use Vocode as a standalone notes app.
+
+**Vocode is designed to be used as a quick capture to export to your notes, where you can then manage or mark as done.** This means that:
+
+- When editing notes in Vocode, the exporter will be edited.
+- When dismissing notes in Vocode, the exporter will not be edited.
+- When deleting notes in Vocode, the exporter will be edited (the note will be deleted).

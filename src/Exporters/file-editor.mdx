@@ -1,0 +1,37 @@
+---
+name: File Editor
+route: /exporters/file-editor
+menu: Exporters
+tags: file, editor, obsidian, markdown, notes, transformer
+updated: 2024-05-16 12:00:00
+navigation: true
+---
+
+import { Hint } from '@nejcm/docz-theme-extended';
+
+# File Editor
+
+A basic file editor exporter compatible with Obsidian and plaintext notes files. 
+
+<Hint type="info" variant="outer">
+  It is recommended to use a file that won't often be edited outside Vocode to reduce failures when trying to edit or delete notes within Vocode.
+</Hint>
+
+## Config
+
+| Name       |   Type    | Default | Description                                |
+| :--------- | :-------: | :-----: | :----------------------------------------- |
+| File Path | `Path` | `/storage/emulated/0/example.md` | The file to edit/export to |
+| Decoration | `string` | `%s` | This allows you to format text before exporting |
+
+## Exporting
+
+Notes will be added with a newline after them, on the last line of the file. This assumes a newline at the end of the file at all times.
+
+## Editing
+
+Notes will be edited using a find and replace in the file of the text stored in Vocode with the user entry
+
+## Deleting
+
+Notes will be edited using a similar find and replace to remove the stored text
