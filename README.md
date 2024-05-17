@@ -6,7 +6,7 @@ Official Vocode Wiki
 
 ## Link
 
-- [Vocode Wiki](https://viscouspotential.github.io/Vocode-Wiki/)
+[Vocode Wiki](https://viscouspotential.github.io/Vocode-Wiki/)
 
 ## Authors
 
