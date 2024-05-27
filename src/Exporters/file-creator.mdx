@@ -1,0 +1,39 @@
+---
+name: File Creator
+route: /exporters/file-creator
+menu: Exporters
+tags: file, creator, obsidian, markdown, notes, exporter
+updated: 2024-05-26 12:00:00
+navigation: true
+---
+
+import { Hint } from '@nejcm/docz-theme-extended';
+
+# File Creator
+
+A basic file creator exporter compatible with Obsidian and plaintext notes files. 
+
+<Hint type="info" variant="outer">
+  It is recommended to use a directory that won't often be edited outside Vocode to reduce failures when trying to edit or delete notes within Vocode.
+</Hint>
+
+## Config
+
+| Name       |   Type    | Default | Description                                |
+| :--------- | :-------: | :-----: | :----------------------------------------- |
+| File Directory | `Path` | `/storage/emulated/0/example` | The directory to edit/export to |
+| Decoration | `string` | `%s` | This allows you to format text before exporting. `%s` represents the output from the exporter |
+| Template File | `Path` | `<none>` | Specify a template file to populate any new notes |
+| File Type | `string` | `.md` | The file extension for any created notes |
+
+## Exporting
+
+Note files will be created in the directory, with either no contents or the contents of the template file.
+
+## Editing
+
+Notes will be edited using a rename of the note file stored in Vocode
+
+## Deleting
+
+Notes will be deleted by deleting the note file (**this is not reversible**)
