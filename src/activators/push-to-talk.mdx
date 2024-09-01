@@ -1,0 +1,48 @@
+---
+name: Push-to-talk (advanced)
+route: /activators/push-to-talk
+menu: Activators
+tags: tasker, activate, push, to, talk
+updated: 2024-05-24 12:00:00
+navigation: true
+---
+
+import { Hint } from '@nejcm/docz-theme-extended';
+
+# Push-to-talk
+
+**This no longer works well on Android 13+ (see [here](https://www.reddit.com/r/tasker/comments/wpt39b/dev_warning_if_you_update_to_android_13_the/) for an explanation)**
+
+Using [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm&hl=en_GB), it is possible to use Vocode as a push-to-talk quick capture method.
+
+<Hint type="info" variant="outer">
+  Better integrations with Tasker are coming..
+</Hint>
+
+These steps are specific to setting up push-to-talk with the power button (Android 12 Samsung Device) but can be adjusted to work with any device and button with some work
+
+---
+
+1. Add a New Profile with `Event` ⮕ `Logcat Entry`
+2. Use a component and filter so that it triggers when you want recording to start
+    * Component: `PhoneWindowManagerExt`
+    * Filter: `consume powerLongPress`
+3. Create a `Send Intent` task that looks like this to communicate with Vocode
+    * Action: `START_RECORDING`
+    * Package: `com.viscouspot.vocode`
+    * Class: `com.viscouspot.vocode.VocodeService`
+    * Target: `Service`
+
+---
+    
+4. Add a New Profile with `Event` ⮕ `Logcat Entry`
+5. Use a component and filter so that it triggers when you want recording to end
+    * Component: `PhoneWindowManagerExt`
+    * Filter: `interceptKeyTq code=26 down=false repeatCount=0`
+6. Create a `Send Intent` task that looks like this to communicate with Vocode
+    * Action: `STOP_RECORDING`
+    * Package: `com.viscouspot.vocode`
+    * Class: `com.viscouspot.vocode.VocodeService`
+    * Target: `Service`
+
+
