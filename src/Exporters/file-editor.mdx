@@ -2,7 +2,7 @@
 name: File Editor
 route: /exporters/file-editor
 menu: Exporters
-tags: file, editor, obsidian, markdown, notes, transformer
+tags: file, editor, obsidian, markdown, notes, exporter
 updated: 2024-05-16 12:00:00
 navigation: true
 ---
@@ -22,7 +22,7 @@ A basic file editor exporter compatible with Obsidian and plaintext notes files.
 | Name       |   Type    | Default | Description                                |
 | :--------- | :-------: | :-----: | :----------------------------------------- |
 | File Path | `Path` | `/storage/emulated/0/example.md` | The file to edit/export to |
-| Decoration | `string` | `%s` | This allows you to format text before exporting |
+| Decoration | `string` | `%s` | This allows you to format text before exporting. `%s` represents the output from the exporter |
 
 ## Exporting
 
@@ -34,4 +34,4 @@ Notes will be edited using a find and replace in the file of the text stored in 
 
 ## Deleting
 
-Notes will be edited using a similar find and replace to remove the stored text
+Notes will be deleted using a similar find and replace to remove the stored text

@@ -16,11 +16,11 @@ export default {
     'Transcribers',
     // { name: 'Transcribers', menu: ["Whisper (recommended)", "Vosk", "Faster Whisper"] },
     { name: 'Transformers', menu: [] },
-    { name: 'Exporters', menu: [] },
+    { name: 'Plugins', menu: [] },
   ],
   groups: {
     '': [],
-    Configuration: ['Transcribers', 'Transformers', 'Exporters'],
+    Configuration: ['Transcribers', 'Transformers', 'Plugins'],
   },
   repository: "https://github.com/ViscousPotential/Vocode-Wiki",
   themeConfig: {
