@@ -11,8 +11,9 @@ export default {
   menu: [
     'Introduction',
     'Get Started',
+    'Transcribers',
     { name: 'Release Notes', menu: [] },
-    { name: 'Transcribers', menu: ["Whisper (recommended)", "Vosk", "Faster Whisper"] },
+    // { name: 'Transcribers', menu: ["Whisper (recommended)", "Vosk", "Faster Whisper"] },
     { name: 'Transformers', menu: [] },
     { name: 'Exporters', menu: [] },
   ],
